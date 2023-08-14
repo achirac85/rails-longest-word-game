@@ -1,0 +1,12 @@
+<h1>Welcome to the longest word-game!</h1>
+<p>Here are your letters:</p>
+<p><%= @letters.join(' ') %></p>
+<p>*****************************************************</p>
+<p>What is your longest word?</p>
+<form action="/score" method="post" data-turbo="false">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="word">
+  <input type="hidden" name="letters" value="<%= @letters.join(',') %>">
+  <input type="hidden" name="start_time" value="<%= Time.now %>">
+  <input type="submit" value="Submit">
+</form>

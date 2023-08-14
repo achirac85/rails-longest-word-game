@@ -1,6 +1,13 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
+  get 'games/new'
+  get 'games/score'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"
+  get '/new', to: 'games#new'
+  post '/score', to: 'games#score'
+  get '/score', to: 'games#score'
 end

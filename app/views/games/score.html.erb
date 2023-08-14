@@ -1,0 +1,6 @@
+<h1>******** Now your results ********</h1>
+<p>Your word: <%= @word %></p>
+<p>Time Taken to answer: <%= @time_taken %></p>
+<p>Your score: <%= @score %></p>
+<p>Message: <%= score_message(@score) %></p> <!-- You need to implement the score_message method -->
+<%= link_to 'Play Again', '/new', class: 'btn btn-primary' %>
